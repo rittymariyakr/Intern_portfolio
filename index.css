@@ -1,0 +1,247 @@
+/*  * is a universal selector */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh; /*view port height 1vh=19.2px*/
+    background-color: white;
+    position: relative; /* for parent div */
+}
+.navbar{
+    display: flex;  /* to move the content in navbar to the right of the image */
+    justify-content: space-between; /* to create space between the picture and content */
+    width: 85%;
+    margin-left: 100px;
+    align-items: center; /* to place the content in vertically center of the div */
+
+}
+.logo{
+    width: 130px;
+}
+.listitem{
+    display:inline-block; /* to align content in one line*/
+    list-style: none; /*to remove the dote in list*/
+    margin: 10px 20px;
+}
+.link{
+    color: black;
+    text-decoration: none; /*to remove underlines in the link*/
+    font-weight: bold; /*to bold the text*/
+}
+.link:hover{   /*mouse hover*/
+    color: red; 
+}
+.title{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+.title-h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+#lastname{
+    color: orange;
+    font-size: 50px;
+}
+.download{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 30px;
+    display: inline-block;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+.images img{ /*descendent selector*/
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transition: bottom 1s ,left 1s;
+}
+.images:hover #shape{
+    bottom: 70px;
+}
+.images:hover #girl{
+    left: 40%;
+}
+#about{
+    margin: 18% 8% 0px 8%;
+}
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 30px;
+}
+.heading span{
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+.about-content{
+    margin-top: 2rem;  /* 1 rem = 16px */
+    display: grid; /* grid is used to set the div content in side by side*/
+    grid-template-columns: repeat(2, 1fr); /*fr means frame, 1fr means we need it in 1 frame*/
+    gap: 2rem; /*to make gap in between two grids*/
+    /* align-items: center; to place the content in vertically center of the div */
+}
+.about-img img{
+    width: 80%;
+    border-radius: 1rem;
+}
+.about-details{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify; /* starting and ending in same line */
+}
+.information{
+    margin-top: 1.5rem;
+
+}
+.info-box{
+    margin-bottom: 1rem;
+}
+.info-box span{
+    margin-left: 1rem;
+}
+#skills{
+    margin: 8% 8% 0px 8%;
+}
+/* to display  the two childs(progress-bar, skill-img) of skill-content in side by side */
+.skill-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.skill-img img{
+    width: 90%;
+    padding-left: 4rem;
+}
+html{
+    scroll-behavior: smooth;  /* for the smooth scrolling */
+}
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.bar-container h3,span{
+    font-size: 1,2rem;
+    font-weight: 400;
+}
+.base-bar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 5rem;
+    position: absolute;
+    bottom: 0px;
+    /* left: 0px; */
+}
+.html-bar{
+    background-color: orange;
+    width: 95%;
+}
+.css-bar{
+    background-color: orange;
+    width: 88%;
+}
+.react-bar{
+    background-color: orange;
+    width: 89%;
+}
+.js-bar{
+    background-color: orange;
+    width: 85% ;
+}
+.icon-set{
+    margin-top: 3%;
+    /* horizontal align(in One Line) */
+    display: flex;
+    /* align them in horizontally center */
+    justify-content: center;
+    /* align items vertically center */
+    align-items: center;
+}
+.icon,.up-arrow{
+    /* to give space in between each icons */
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+.icon i{
+    font-size: 30px;
+    color: black;
+}
+.icon:hover{
+    background-image: linear-gradient(to bottom left, yellow,orangered);
+}
+.icon:hover i{
+    color: white;
+    animation: shake 0.75s; /* used for animation */
+}
+
+/* keyframes are used for create animations */
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+footer{
+    margin: 3rem 0px;
+}
+footer p{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+.up-arrow{
+    float: right;
+    margin: 0px 10px 50px 0px ;
+   
+    
+    
+}
+.up-arrow {
+   
+    background-image: linear-gradient(to bottom left, yellow,orangered);
+
+}
+.up-arrow:hover{
+    background-image: linear-gradient(to bottom left, yellow,orangered);
+}
+.up-arrow:hover i{
+    color: white;
+    animation: shake 0.75s; /* used for animation */
+}
